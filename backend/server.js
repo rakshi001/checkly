@@ -10,6 +10,7 @@ app.get("/api", (req, res) => {
 
 app.post("/api", (req, res) => {
   res.status(200).res.send("your note created successfully");
+  console.log("hey backend")
 });
 
 app.listen(5001, () => {
