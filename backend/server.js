@@ -8,5 +8,5 @@ app.use("/api/notes",noteRoutes)
 
 
 app.listen(5001, () => {
-  console.log("server started at 5001");
+  console.log("server sta rted at 5001");
 });
