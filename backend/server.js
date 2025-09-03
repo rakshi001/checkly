@@ -1,16 +1,14 @@
 import express from "express";
-import noteRoutes from "./routes/notesRoutes.js";
+import noteRoutes from './routes/notesRoutes.js'
 
 const app = express();
 
-app.use("/api/notes", noteRoutes);
+// app.get("/api/notes", (req, res) => {
+//   res.status(200).json({
+//     msg: "hi there",
+//   });
+// });
 
-app.post("/api/notes", (req, res) => {
-  res.status(201).json({
-    msg: "it is a post req",
-  });
-});
+app.get("api/notes",noteRoutes)
 
-app.listen(5001, () => {
-  console.log("server started at 5001");
-});
+app.listen(5000);
