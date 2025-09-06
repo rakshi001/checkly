@@ -6,6 +6,6 @@ export const getAllNotes = (req, res) => {
 
 export const createNote = (req, res) => {
   res.status(201).json({
-    msg: "note just created successfully",
+    msg: "note just cre ated successfully",
   });
 }
