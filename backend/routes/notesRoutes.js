@@ -1,18 +1,11 @@
 import express from "express";
+import { createNote, getAllNotes } from "../controllers/notesController.js";
 
 const router = express.Router();
 
-router.get("/sth", (req, res) => {
-  res.status(200).json({
-    msg: "u just fetched the notes",
-  });
-});
+router.get("/sth", getAllNotes);
 
-router.post("/", (req, res) => {
-  res.status(201).json({
-    msg: "note just created successfully",
-  });
-});
+router.post("/", createNote);
 
 router.put("/:id", (req, res) => {
   res.status(201).json({
@@ -25,8 +18,5 @@ router.delete("/:id", (req, res) => {
     msg: "note just deleted successfully",
   });
 });
-
-
-
 
 export default router;
