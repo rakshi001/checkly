@@ -8,7 +8,7 @@ export const getAllNotes = async (req, res) => {
     console.log("error in getAllNotes controler", error);
 
     res.status(500).json({
-      message: "Internal server error",
+      message: "Internal ser ver error",
     });
   }
 };
