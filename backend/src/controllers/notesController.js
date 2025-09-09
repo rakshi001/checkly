@@ -1,13 +1,25 @@
-export const getAllNotes = (req, res) => {
-  res.status(200).json({
-    msg: "u just fetched the notes ",
-  });
+import Note from "../model/Note.js";
+
+export const getAllNotes = async (req, res) => {
+  try {
+    const notes = await Note.find();
+    res.status(200).json(notes);
+  } catch (error) {
+    console.log("error in getAllNotes controler", error);
+
+    res.status(500).json({
+      message: "Internal server error",
+    });
+  }
 };
 
-export const createNote = (req, res) => {
-  res.status(201).json({
-    msg: "note just cre ated successfully",
-  });
+export const createNote = async (req, res) => {
+  try{
+      
+  }
+  catch{
+
+  }
 };
 
 export const updateNote = (req, res) => {
